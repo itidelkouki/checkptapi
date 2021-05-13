@@ -16,6 +16,8 @@ const UserCard = ({ user }) => {
           <CardTitle className="cardtitle" tag="h5">
             {user.name}{" "}
           </CardTitle>
+                    <img src="https://thumbs.dreamstime.com/b/avatar-neutre-du-visage-de-type-anonyme-silhouette-principale-incognito-177796606.jpg" width="25%" style={{ border: "solid 5px gold", borderRadius:"50%"}}/>
+
           <CardSubtitle tag="h6" className="mb-2text-muted">
             User name : {user.username}{" "}
           </CardSubtitle>

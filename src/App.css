@@ -1,6 +1,8 @@
-.App {
+.list-cards {
   font-family: sans-serif;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 body {

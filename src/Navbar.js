@@ -1,6 +1,5 @@
 import React from "react";
 
-import { nav } from "bootstrap";
 
 export default function Nav() {
   return (

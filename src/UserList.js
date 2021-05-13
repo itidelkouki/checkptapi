@@ -5,7 +5,7 @@ export default function UserList({ users, loading }) {
 
 
   return (
-    <div className="App">
+    <div className="list-cards">
       {loading ? (
         <p>...loading </p>
       ) : (
