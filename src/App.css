@@ -1,38 +1,57 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  height: 10%;
+  font-weight: bold;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-User {
+  background-color: rgb(224, 248, 255);
+  border: solid 5px rgb(32, 159, 218);
+  height: 350px;
+  width: 450px;
+  padding: 10px;
+  margin: 80px;
+  border-radius: 3%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: black;
+}
+.mb-2text-muted {
+  color: blue;
+  font-size: 15px;
+}
+.App {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.cardtitle {
+  font-size: 25px;
+  font-weight: bold;
+  color: gold;
 }
 
-.App-link {
-  color: #61dafb;
+div :hover {
+  background: rgb(252, 250, 145);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.detailsbutton {
+  background-color: gold;
+  border: solid 2px gold;
+  border-radius: 8%;
+}
+.card-details {
+  background-color: rgb(221, 221, 221);
+  border: solid 5px black;
+  height: 350px;
+  width: 450px;
+  padding: 10px;
+  margin: 80px;
+  border-radius: 3%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: blue;
 }

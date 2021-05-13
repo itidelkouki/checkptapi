@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import UserList from "./UserList";
+import { Route } from "react-router-dom";
+import UserDetails from "./UserDetails";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import Footer from "./Footer";
+import Nav from "./Navbar";
 
-function App() {
+export default function App() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        setUsers(res.data);
+        setLoading(false);
+      } catch (error) {
+        console.log("err");
+      }
+    };
+    fetchData();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav />
+      <Route
+        exact
+        path="/"
+        render={() => <UserList users={users} loading={loading} />}
+      />
+      <Route
+        path="/details/:userId"
+        render={(props) => (
+          <UserDetails {...props} users={users} loading={loading} />
+        )}
+      />
+      <Footer />,
     </div>
   );
 }
-
-export default App;
