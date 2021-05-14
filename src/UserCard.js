@@ -13,10 +13,11 @@ const UserCard = ({ user }) => {
     <div>
       <Card className="card-User">
         <CardBody>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT73s9z2T_I9BOpGKQpuOL2s8ZCNLNwAnmiFb-5Rjky8-nhfNltVnKKKSdRfsmYQQIwkzQ&usqp=CAU" width="25%" style={{ border: "solid 5px gold", borderRadius:"50%"}}/>
+
           <CardTitle className="cardtitle" tag="h5">
             {user.name}{" "}
           </CardTitle>
-                    <img src="https://thumbs.dreamstime.com/b/avatar-neutre-du-visage-de-type-anonyme-silhouette-principale-incognito-177796606.jpg" width="25%" style={{ border: "solid 5px gold", borderRadius:"50%"}}/>
 
           <CardSubtitle tag="h6" className="mb-2text-muted">
             User name : {user.username}{" "}
